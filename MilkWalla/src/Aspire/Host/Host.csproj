@@ -1,0 +1,18 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.1.1">
+  <PropertyGroup>
+    <RootNamespace>MilkWalla.Aspire</RootNamespace>
+    <AssemblyName>MilkWalla.Aspire</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>a007d645-3346-446a-89ab-2bb3fdeebb54</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\api\server\Server.csproj" />
+    <ProjectReference Include="..\..\apps\blazor\client\Client.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,43 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Aspire/">
+    <Project Path="src/Aspire/host/Host.csproj" />
+    <Project Path="src/Aspire/service-defaults/ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/Blazor/">
+    <Project Path="src/Apps/blazor/client/Client.csproj" />
+    <Project Path="src/Apps/blazor/infrastructure/Infrastructure.csproj" />
+    <Project Path="src/Apps/blazor/shared/Shared.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="src/.editorconfig" />
+    <File Path="src/Directory.Build.props" />
+    <File Path="src/Directory.Packages.props" />
+    <File Path="src/README.md" />
+  </Folder>
+  <Folder Name="/WebApi/">
+    <Project Path="src/Api/server/Server.csproj" />
+  </Folder>
+  <Folder Name="/WebApi/Framework/">
+    <Project Path="src/Api/framework/Core/Core.csproj" />
+    <Project Path="src/Api/framework/Infrastructure/Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/WebApi/Migrations/">
+    <Project Path="src/Api/migrations/MSSQL/MSSQL.csproj" />
+    <Project Path="src/Api/migrations/PostgreSQL/PostgreSQL.csproj" />
+  </Folder>
+  <Folder Name="/WebApi/Modules/" />
+  <Folder Name="/WebApi/Modules/Catalog/">
+    <Project Path="src/Api/modules/Catalog/Catalog.Application/Catalog.Application.csproj" />
+    <Project Path="src/Api/modules/Catalog/Catalog.Domain/Catalog.Domain.csproj" />
+    <Project Path="src/Api/modules/Catalog/Catalog.Infrastructure/Catalog.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/WebApi/Modules/Todo/">
+    <Project Path="src/Api/modules/Todo/Todo.csproj" />
+  </Folder>
+  <Project Path="src/Shared/Shared.csproj" />
+</Solution>

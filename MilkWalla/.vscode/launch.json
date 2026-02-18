@@ -1,0 +1,79 @@
+{
+    "version": "0.2.0",
+    "inputs": [],
+    "compounds": [
+        {
+            "name": "Launch Both Projects",
+            "configurations": [
+                "C#: Server",
+                "C#: Client"
+            ],
+            "stopAll": true,
+            "presentation": {
+                "hidden": false,
+                "group": "0",
+                "order": 1
+            }
+        },
+        {
+            "name": "Launch Aspire",
+            "configurations": [
+                "C#: Aspire"
+            ],
+            "stopAll": true,
+            "presentation": {
+                "hidden": false,
+                "group": "0",
+                "order": 2,
+            }
+        }
+    ],
+    "configurations": [
+        {
+            "type": "aspire",
+            "request": "launch",
+            "name": "C#: Aspire",
+            "program": "${workspaceFolder}/src/Aspire/Host/Host.csproj",
+            "debuggers": {
+                "project": {
+                    "console": "integratedTerminal",
+                    "logging": {
+                        "moduleLoad": false
+                    }
+                },
+                "apphost": {
+                    "stopAtEntry": true
+                }
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "project",
+                "order": 1,
+            }
+        },
+        {
+            "name": "C#: Server",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\src\\Api\\server\\Server.csproj",
+            "launchConfigurationId": "TargetFramework=;Kestrel",
+            "presentation": {
+                "hidden": false,
+                "group": "project",
+                "order": 2,
+            }
+        },
+        {
+            "name": "C#: Client",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\src\\Apps\\blazor\\client\\Client.csproj",
+            "launchConfigurationId": "TargetFramework=;https",
+            "presentation": {
+                "hidden": false,
+                "group": "project",
+                "order": 3,
+            }
+        }
+    ],
+}
