@@ -7,7 +7,11 @@
         {
             "name": "flutter_milk_walla",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--flavor development",
+                "-t lib/main-development.dart"
+            ]
         },
         {
             "name": "flutter_milk_walla (profile mode)",
