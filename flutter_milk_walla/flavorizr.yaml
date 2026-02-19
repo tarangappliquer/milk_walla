@@ -25,10 +25,6 @@ flavors:
         PROVISIONING_PROFILE_SPECIFIER: "Dev-ProvisioningProfile"
         GOOGLE_MAPS_API_KEY: "AIza-DEV-KEY-HERE"
 
-    variables:
-      API_BASE_URL: "https://api.dev.example.com"
-      FEATURE_TOGGLE_XYZ: "true"
-
   staging:
     app:
       name: "Staging App"
@@ -47,10 +43,6 @@ flavors:
         PROVISIONING_PROFILE_SPECIFIER: "Staging-ProvisioningProfile"
         GOOGLE_MAPS_API_KEY: "AIza-STAGING-KEY-HERE"
 
-    variables:
-      API_BASE_URL: "https://api.staging.example.com"
-      FEATURE_TOGGLE_XYZ: "true"
-
   production:
     app:
       name: "Production App"
@@ -68,7 +60,3 @@ flavors:
         DEVELOPMENT_TEAM: YOURPRODUCTIONTEAMID
         PROVISIONING_PROFILE_SPECIFIER: "Production-ProvisioningProfile"
         GOOGLE_MAPS_API_KEY: "AIza-PROD-KEY-HERE"
-
-    variables:
-      API_BASE_URL: "https://api.prod.example.com"
-      FEATURE_TOGGLE_XYZ: "true"

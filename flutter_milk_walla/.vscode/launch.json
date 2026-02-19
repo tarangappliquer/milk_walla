@@ -9,8 +9,9 @@
             "request": "launch",
             "type": "dart",
             "args": [
+                "-t lib/main-development.dart",
                 "--flavor development",
-                "-t lib/main-development.dart"
+                "--dart-define-from-file .env.development"
             ]
         },
         {
