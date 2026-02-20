@@ -6,7 +6,7 @@
 #   ios:
 
 flavors:
-  development:
+  dev:
     app:
       name: "Development Flavor"
 
@@ -43,7 +43,7 @@ flavors:
         PROVISIONING_PROFILE_SPECIFIER: "Staging-ProvisioningProfile"
         GOOGLE_MAPS_API_KEY: "AIza-STAGING-KEY-HERE"
 
-  production:
+  prod:
     app:
       name: "Production App"
 

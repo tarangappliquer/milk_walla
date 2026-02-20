@@ -6,7 +6,7 @@ import 'flavors.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  F.appFlavor = Flavor.production;
+  F.appFlavor = Flavor.dev;
 
   runApp(ProviderScope(child: const App()));
 }

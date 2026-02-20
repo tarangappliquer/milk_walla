@@ -6,7 +6,7 @@ android.apply {
     flavorDimensions("flavor-type")
 
     productFlavors {
-        create("development") {
+        create("dev") {
             dimension = "flavor-type"
             applicationId = "com.dev.flavorsdemo"
             resValue(type = "string", name = "app_name", value = "Development Flavor")
@@ -18,7 +18,7 @@ android.apply {
             resValue(type = "string", name = "app_name", value = "Staging App")
             resValue(type = "string", name = "google_maps_api_key", value = "AIza-STAGING-KEY-HERE")
         }
-        create("production") {
+        create("prod") {
             dimension = "flavor-type"
             applicationId = "com.production.flavorsdemo"
             resValue(type = "string", name = "app_name", value = "Production App")
