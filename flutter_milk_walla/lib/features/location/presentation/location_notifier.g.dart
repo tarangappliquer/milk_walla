@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'location_provider.dart';
+part of 'location_notifier.dart';
 
 // **************************************************************************
 // RiverpodGenerator
@@ -9,43 +9,43 @@ part of 'location_provider.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
 
-@ProviderFor(UserLocation)
-final userLocationProvider = UserLocationProvider._();
+@ProviderFor(LocationNotifier)
+final locationProvider = LocationNotifierProvider._();
 
-final class UserLocationProvider
-    extends $StreamNotifierProvider<UserLocation, LocationData> {
-  UserLocationProvider._()
+final class LocationNotifierProvider
+    extends $AsyncNotifierProvider<LocationNotifier, Position?> {
+  LocationNotifierProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
-        name: r'userLocationProvider',
+        name: r'locationProvider',
         isAutoDispose: true,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
 
   @override
-  String debugGetCreateSourceHash() => _$userLocationHash();
+  String debugGetCreateSourceHash() => _$locationNotifierHash();
 
   @$internal
   @override
-  UserLocation create() => UserLocation();
+  LocationNotifier create() => LocationNotifier();
 }
 
-String _$userLocationHash() => r'50f18613a6f13deeb17faa71adba1f8e4dc2b498';
+String _$locationNotifierHash() => r'e5f7e6e36b88dd7873b9721a1e0983276dcff4d3';
 
-abstract class _$UserLocation extends $StreamNotifier<LocationData> {
-  Stream<LocationData> build();
+abstract class _$LocationNotifier extends $AsyncNotifier<Position?> {
+  FutureOr<Position?> build();
   @$mustCallSuper
   @override
   void runBuild() {
-    final ref = this.ref as $Ref<AsyncValue<LocationData>, LocationData>;
+    final ref = this.ref as $Ref<AsyncValue<Position?>, Position?>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<AsyncValue<LocationData>, LocationData>,
-              AsyncValue<LocationData>,
+              AnyNotifier<AsyncValue<Position?>, Position?>,
+              AsyncValue<Position?>,
               Object?,
               Object?
             >;

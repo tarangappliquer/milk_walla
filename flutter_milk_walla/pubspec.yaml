@@ -27,8 +27,8 @@ dependencies:
   google_polyline_algorithm: ^3.1.0
   mappls_direction_plugin: ^2.0.0
   mappls_nearby_plugin: ^2.0.0
-  location: ^8.0.1
   permission_handler: ^12.0.1
+  geolocator: ^14.0.2
   # openapi_generator_annotations: ^6.1.0
 
 dev_dependencies:

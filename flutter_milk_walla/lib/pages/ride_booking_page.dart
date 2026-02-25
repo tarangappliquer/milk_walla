@@ -1,4 +1,4 @@
-import 'package:flutter_milk_walla/globals/providers/permissions/location_provider.dart';
+import 'package:flutter_milk_walla/features/location/presentation/location_notifier.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:mappls_gl/mappls_gl.dart';
@@ -15,12 +15,12 @@ class _RideBookingPageState extends ConsumerState<RideBookingPage> {
 
   @override
   Widget build(BuildContext context) {
-    final locationAsync = ref.watch(userLocationProvider);
+    final locationAsync = ref.watch(locationProvider);
     return Scaffold(
       body: locationAsync.when(
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (err, stack) => RefreshIndicator(
-          onRefresh: () => ref.read(userLocationProvider.notifier).retry(),
+          onRefresh: () => ref.read(locationProvider.notifier).getLocation(),
           child: ListView(
             physics: const AlwaysScrollableScrollPhysics(),
             children: [
@@ -53,13 +53,16 @@ class _RideBookingPageState extends ConsumerState<RideBookingPage> {
             ],
           ),
         ),
-        data: (location) {
+        data: (position) {
+          if (position == null) {
+            return const Text("Pull down to get location");
+          }
           return Stack(
             children: [
               // 1. The Map Layer
               MapplsMap(
-                initialCameraPosition: const CameraPosition(
-                  target: LatLng(28.6139, 77.2090),
+                initialCameraPosition: CameraPosition(
+                  target: LatLng(position.latitude, position.longitude),
                   zoom: 14.0,
                 ),
                 onMapCreated: (controller) => mapController = controller,
