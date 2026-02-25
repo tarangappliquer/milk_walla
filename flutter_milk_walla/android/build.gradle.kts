@@ -12,23 +12,24 @@ val newBuildDir: Directory =
 rootProject.layout.buildDirectory.value(newBuildDir)
 
 subprojects {
+
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
-}
-subprojects {
+
     project.evaluationDependsOn(":app")
 
-    // Force Kotlin to 17
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile>().configureEach {
-        compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-        }
-    }
-
-    // Force Java to 17
+    // Force every Java compilation task to 17
     tasks.withType<JavaCompile>().configureEach {
         sourceCompatibility = JavaVersion.VERSION_17.toString()
         targetCompatibility = JavaVersion.VERSION_17.toString()
+    }
+
+    // Force every Kotlin compilation task to 17
+    // Using this 'tasks.withType' approach avoids the 'final languageVersion' error
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        }
     }
 }
 
