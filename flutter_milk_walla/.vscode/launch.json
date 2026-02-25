@@ -11,8 +11,6 @@
             "args": [
                 "-t",
                 "./lib/main_dev.dart",
-                "--flavor",
-                "dev",
                 "--dart-define-from-file",
                 ".env.dev"
             ]

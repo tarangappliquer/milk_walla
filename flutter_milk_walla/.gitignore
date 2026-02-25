@@ -43,3 +43,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+android/app/src/**/*.a.conf
+!android/app/src/dev/*.a.conf
+
+android/app/src/**/*.a.olf
+!android/app/src/dev/*.a.olf
+
+*.zip

@@ -6,14 +6,14 @@ import 'package:flutter/services.dart';
 import 'package:google_polyline_algorithm/google_polyline_algorithm.dart';
 import 'package:mappls_gl/mappls_gl.dart';
 
-class MapDemoScreen extends StatefulWidget {
-  const MapDemoScreen({super.key});
+class MapPage extends StatefulWidget {
+  const MapPage({super.key});
 
   @override
-  State<MapDemoScreen> createState() => _MapDemoScreenState();
+  State<MapPage> createState() => _MapPageState();
 }
 
-class _MapDemoScreenState extends State<MapDemoScreen> {
+class _MapPageState extends State<MapPage> {
   late MapplsMapController mapController;
 
   Future _onMapCreated(MapplsMapController controller) async {

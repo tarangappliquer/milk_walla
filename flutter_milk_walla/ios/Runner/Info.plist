@@ -69,5 +69,10 @@
 
 		<key>GoogleMapsApiKey</key>
 		<string>$(GOOGLE_MAPS_API_KEY)</string>
+
+		<key>NSLocationWhenInUseUsageDescription</key>
+		<string>This app needs access to location to track your ride.</string>
+		<key>NSLocationAlwaysUsageDescription</key>
+		<string>This app needs access to location to track your ride.</string>
 	</dict>
 </plist>
